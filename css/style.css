@@ -250,6 +250,10 @@ h6 {
   color: #fff;
 }
 
+.btn:hover::before {
+  width: 100%;
+}
+
 .btn::before {
   content: "";
   display: block;
@@ -260,6 +264,9 @@ h6 {
   background: #DB3138;
   width: 6.875rem;
   height: 100%;
+  -webkit-transition: width 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s;
+  transition: width 0.3s ease 0s;
 }
 
 .section-text {
@@ -1030,6 +1037,14 @@ body._touch .menu__list > li.active .menu__arrow {
 .section-slider .swiper-button-prev,
 .section-slider .swiper-button-next {
   display: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.section-slider .swiper-button-prev.swiper-button-disabled.fading._anim-active,
+.section-slider .swiper-button-next.swiper-button-disabled.fading._anim-active {
+  opacity: 0.35;
 }
 
 .section-slider .swiper-button-prev {
